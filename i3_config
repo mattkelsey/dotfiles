@@ -1,4 +1,3 @@
-
 # wallpaper
 exec --no-startup-id feh --bg-scale /home/matt/Pictures/Wallpapers/lasers.jpg
 
