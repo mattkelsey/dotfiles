@@ -1,0 +1,13 @@
+rofi.color-enabled: true
+rofi.color-window: #2d3542, argb:0000000, #fff73e
+rofi.color-normal: argb:0ffffff, #fff73e, argb:0eee8d5, #586e75, #fff73e
+rofi.color-active: #fff73e, #2d3542, #fff73e, #fff73e, #2d3542
+rofi.color-urgent: #fdf6e3, #dc322f, #eee8d5, #dc322f, #fdf6e3
+rofi.lines: 4
+rofi.font: Roboto 12
+rofi.separator-style: solid
+rofi.width: 30
+rofi.hide-scrollbar: true
+#rofi.location: 6
+#rofi.auto-select: true
+rofi.bw: 0
