@@ -47,7 +47,7 @@ font pango: Roboto 12
 for_window [class="^.*"] border pixel 2
 
 # tasteful gaps
-gaps outer 10
+gaps outer 5
 gaps inner 15
 smart_gaps on
 
@@ -144,6 +144,7 @@ bar {
 	font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 	font pango: Roboto 10.5 
 }
+
 
 # window border colors
 client.focused #2aa198 #FFF73EAA #eee9d5 #2aa198
