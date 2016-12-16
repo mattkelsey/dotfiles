@@ -13,6 +13,9 @@ exec --no-startup-id compton
 # superkey modifier
 set $mod Mod4
 
+# keyboard language
+exec ibus-daemon
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -130,15 +133,15 @@ exec --no-startup-id volumeicon
 bar {
 	position top
 	i3bar_command i3bar -t
-	status_command i3status
+	status_command py3status
 	separator_symbol " | "
 	colors {
 		background #002b3600
-           	statusline #FFF73E
+        statusline #FFF73E
 		focused_workspace #FFF73E #eee9d500 #FFF73E
 		inactive_workspace #2aa19800 #2aa19800 #FFF73E
 		urgent_workspace #cb4b16 #cb4b1600 #FF0000
-	        separator #FFF73E
+	    separator #FFF73E
 	}
 	
 	font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1

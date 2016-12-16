@@ -10,28 +10,36 @@ general {
         colors = false
         interval = 1
 }
-
 order += "cpu_temperature 0"
 order += "disk /"
+order += "arch_updates"
 order += "wireless _first_"
 order += "ethernet _first_"
 order += "battery 0"
 order += "tztime local"
 
+#external_script for sound cirrsu
+
 cpu_temperature 0{
-     format = "%degrees C"
-     path = "/sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input"
+    	format = "%degrees C"
+    	path = "/sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input"
+}
+
+arch_updates {
+    	cache_timeout: 60
 }
 
 wireless _first_ {
         format_up = "(%quality at %essid) %ip"
         format_down = "down"
+	on_click 1 = "exec nm-connection-editor"
 }
 
 ethernet _first_ {
         # if you use %speed, i3status requires root privileges
         format_up = "%ip (%speed)"
         format_down = "down"
+	on_click 1 = "exec nm-connection-editor"
 }
 
 battery 0 {
@@ -40,8 +48,10 @@ battery 0 {
 
 tztime local {
         format = "%m-%d-%Y %I:%M:%S"
+	on_click 1 = "reload"
 }
 
 disk "/" {
         format = "%avail"
+	on_click 1 = "exec nautilus"
 }

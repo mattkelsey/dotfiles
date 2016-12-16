@@ -93,8 +93,7 @@ autoload -U colors && colors
 
 #Change shell colors 
 #prompt redhat
-
-# ALIASES
+# ALIASES 
 alias pacS='sudo pacman -S'
 alias up='sudo pacman -Syu --noconfirm'
 alias jtu='echo "### Starting JobTracker... ###" && docker-compose up -d && WORKER_SIMULATION=1 grunt serve'
@@ -109,10 +108,12 @@ alias add='git add'
 alias commit='git commit -m'
 alias push='git push'
 alias compose='docker-compose'
-
 export NODE_PATH=/home/matt/.npm-global/lib/node_modules
 export TERM=xterm-256color
-
+alias go='export GOPATH=$(pwd) && go'
+alias dev='cd /home/matt/Documents/Programming/'
+alias robot='cd /home/matt/Documents/robotics/2856 && git status'
+alias screen='xrandr --output HDMI1 --mode 1920x1080'
 # tabtab source for yo package
 # uninstall by removing these lines or running `tabtab uninstall yo`
 [[ -f /home/matt/.npm-global/lib/node_modules/yo/node_modules/tabtab/.completions/yo.zsh ]] && . /home/matt/.npm-global/lib/node_modules/yo/node_modules/tabtab/.completions/yo.zshexport PATH=/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/matt/.gem/ruby/2.3.0/bin
